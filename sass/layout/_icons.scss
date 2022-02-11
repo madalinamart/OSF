@@ -1,0 +1,20 @@
+.icons-desktop {
+  display: none;
+
+  @include mobile {
+    text-align: center;
+    margin-top: auto;
+    color: $grey;
+    cursor: pointer;
+    height: 54px;
+    background: $dark-bg;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    i {
+      padding: 0 22px;
+      font-size: 25px;
+    }
+  }
+}

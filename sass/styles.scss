@@ -1,0 +1,26 @@
+//IMPORT FONT
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+//IMPORT PARTIALS
+@import 'partials/variables', 'partials/mixins';
+
+//IMPORT LAYOUTS
+@import 'layout/header', 'layout/icons', 'layout/login';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+}
+html {
+  height: 100%;
+}
+body {
+  /* height: 1000px; */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}

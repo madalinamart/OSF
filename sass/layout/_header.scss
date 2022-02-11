@@ -1,0 +1,481 @@
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 55px 0;
+  border-bottom: 1px solid $grey;
+
+  input {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+
+    .logo-text {
+      margin-left: 10px;
+
+      @include mobile {
+        display: none;
+      }
+
+      h1 {
+        font-weight: 900;
+        color: #011847;
+        letter-spacing: 6.33px;
+        font-size: 32px;
+      }
+
+      p {
+        color: $base;
+        font-size: 18px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  #mega-photo {
+    display: block;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  #mini-photo {
+    display: none;
+
+    @include mobile {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 20px;
+      margin-bottom: 22px;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: 65px;
+
+    @include mobile {
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+    }
+
+    .btn {
+      color: #131313;
+      font-size: 20px;
+      display: none;
+      cursor: pointer;
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+
+  .products {
+    @include mobile {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  .sale {
+    @include mobile {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+      max-height: 0;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    a {
+      color: #fff;
+      font-size: 16px;
+      line-height: 31px;
+
+      &:hover {
+        color: $base;
+      }
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 31px;
+        font-weight: 300;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .nav-links {
+    display: inline-flex;
+
+    @include mobile {
+      position: fixed;
+      width: 100%;
+      top: 75px;
+      left: -100%;
+      background: $dark-bg;
+      display: block;
+      overflow-y: auto;
+      justify-content: space-between;
+    }
+    .nav-item {
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      select {
+        border: none;
+        outline: none;
+        font-size: 20px;
+        color: $grey;
+        padding: 0 22px;
+        background-color: #fff;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+
+    li {
+      padding: 10px 22px;
+      list-style: none;
+
+      &:hover {
+        .mega-menu {
+          top: 76px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      @include mobile {
+        padding: 10px 22px;
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      p {
+        height: 65px;
+        align-items: center;
+        display: flex;
+        padding: 0px 22px 0px 22px;
+        font-size: 14px;
+        font-weight: 400;
+
+        &:hover {
+          background: $dark-bg;
+          border-bottom: 5px solid $base;
+          color: #fff;
+        }
+
+        @include mobile {
+          display: block;
+          font-size: 16px;
+          font-weight: 900;
+          line-height: 31px;
+          padding-right: 22px;
+        }
+      }
+    }
+
+    .desktop-item {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .mobile-item {
+      display: none;
+
+      @include mobile {
+        padding: 22px;
+        font-size: 14px;
+        font-weight: 900;
+        display: block;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .icons-nav {
+    align-items: center;
+    justify-content: center;
+    color: $grey;
+    cursor: pointer;
+    display: flex;
+
+    @include mobile {
+      display: none;
+    }
+
+    i {
+      padding: 0 22px;
+      font-size: 25px;
+    }
+  }
+
+  .fa-bars {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  .fa-times {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  .fa-caret-down {
+    display: none;
+
+    @include mobile {
+      display: block;
+      float: right;
+      color: $grey;
+    }
+  }
+
+  #menu-btn:checked ~ .nav-links {
+    @include mobile {
+      left: 0%;
+    }
+  }
+
+  #menu-btn:checked ~ .btn.menu-btn {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  #cancel-btn:checked ~ .btn.menu-btn {
+    @include mobile {
+      display: block;
+    }
+  }
+
+  #cancel-btn:checked ~ .btn.cancel-btn {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  #cancel-btn:checked ~ .mega-menu {
+    @include mobile {
+      max-height: 100%;
+    }
+  }
+
+  #menu-btn:checked ~ .mega-menu {
+    @include mobile {
+      left: 0%;
+    }
+  }
+
+  #show-drop:checked ~ .mega-menu {
+    @include mobile {
+      max-height: 100%;
+    }
+  }
+
+  #show-products:checked ~ .products {
+    @include mobile {
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  #show-drop:checked ~ .links li {
+    @include mobile {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  #show-sale:checked ~ .sale {
+    @include mobile {
+      display: flex;
+      max-height: 100%;
+    }
+  }
+
+  .mega-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+
+    @include mobile {
+      position: static;
+      top: 65px;
+      opacity: 1;
+      visibility: visible;
+      max-height: 0px;
+      overflow: hidden;
+    }
+
+    .content {
+      background: $dark-bg;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr 1fr;
+      width: 100%;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      p {
+        color: #fff;
+        font-weight: 900;
+        font-size: 14px;
+      }
+
+      label {
+        @include mobile {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 31px;
+        }
+      }
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 100px;
+      list-style: none;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0px;
+      }
+
+      li {
+        a {
+          color: #fff;
+          font-size: 16px;
+          line-height: 31px;
+          display: block;
+
+          @include mobile {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 31px;
+          }
+
+          &:hover {
+            color: $base;
+
+            @include mobile {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#menu-btn:checked ~ .nav-links {
+  @include mobile {
+    left: 0%;
+  }
+}
+
+#menu-btn:checked ~ .btn.menu-btn {
+  @include mobile {
+    display: none;
+  }
+}
+
+#cancel-btn:checked ~ .btn.menu-btn {
+  @include mobile {
+    display: block;
+  }
+}
+
+#cancel-btn:checked ~ .btn.cancel-btn {
+  @include mobile {
+    display: none;
+  }
+}
+
+#cancel-btn:checked ~ .mega-menu {
+  @include mobile {
+    max-height: 100%;
+  }
+}
+
+#menu-btn:checked ~ .mega-menu {
+  @include mobile {
+    left: 0%;
+  }
+}
+
+#show-drop:checked ~ .mega-menu {
+  @include mobile {
+    max-height: 100%;
+  }
+}
+
+#show-products:checked ~ .products {
+  @include mobile {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#show-drop:checked ~ .links li {
+  @include mobile {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#show-sale:checked ~ .sale {
+  @include mobile {
+    display: flex;
+    max-height: 100%;
+  }
+}

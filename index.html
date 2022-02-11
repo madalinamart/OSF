@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--                                    NAVBAR                              -->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"><img src="images/Logo.png" alt="OSF logo" /> </a>
+          <a href="#" class="logo-text">
+            <h1>OSF</h1>
+            <p>Academy</p>
+          </a>
+        </div>
+
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="cancel-btn" />
+        <ul class="nav-links">
+          <li>
+            <p class="desktop-item" id="hover">SERVICES</p>
+            <input type="checkbox" id="show-drop" />
+            <label for="show-drop" class="mobile-item">
+              SERVICES <i class="fas fa-caret-down"></i
+            ></label>
+
+            <div class="mega-menu">
+              <div class="content">
+                <div class="row">
+                  <p class="desktop-item">PRODUCT CATEGORIES</p>
+                  <input type="checkbox" id="show-products" />
+                  <label for="show-products" class="mobile-item">
+                    PRODUCT CATEGORIES <i class="fas fa-caret-down"></i
+                  ></label>
+                  <div class="products">
+                    <ul class="links">
+                      <div>
+                        <li><a href="404"> Accessories </a></li>
+                        <li><a href="404"> Alcohol </a></li>
+                        <li><a href="404"> Art </a></li>
+                        <li><a href="404"> Books </a></li>
+                        <li><a href="404"> Drink </a></li>
+                        <li><a href="404"> Electronics </a></li>
+                        <li><a href="404"> Flowers & Plants </a></li>
+                        <li><a href="404"> Food </a></li>
+                      </div>
+                      <div>
+                        <li><a href="404"> Gadgets </a></li>
+                        <li><a href="404"> Garden </a></li>
+                        <li><a href="404"> Grocery </a></li>
+                        <li><a href="404"> Home </a></li>
+                        <li><a href="404"> Jewelry </a></li>
+                        <li><a href="404"> Kids & Baby </a></li>
+                        <li><a href="404"> Men's fashion </a></li>
+                        <li><a href="404"> Mobile</a></li>
+                      </div>
+                      <div>
+                        <li><a href="404"> Motorcycles </a></li>
+                        <li><a href="404"> Movies </a></li>
+                        <li><a href="404"> Music </a></li>
+                        <li><a href="404"> Office </a></li>
+                        <li><a href="404"> Pets </a></li>
+                        <li><a href="404"> Romantic </a></li>
+                        <li><a href="404"> Sport</a></li>
+                        <li><a href="404"> Toys</a></li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <p class="desktop-item">SALE</p>
+                  <input type="checkbox" id="show-sale" />
+                  <label for="show-sale" class="mobile-item">
+                    SALE <i class="fas fa-caret-down"></i>
+                  </label>
+                  <div class="sale">
+                    <ul>
+                      <li><a href="404"> Accessories </a></li>
+                      <li><a href="404"> Alcohol </a></li>
+                      <li><a href="404"> Art </a></li>
+                      <li><a href="404"> Books </a></li>
+                      <li><a href="404"> Drink </a></li>
+                      <li><a href="404"> Electronics </a></li>
+                      <li><a href="404"> Flowers & Plants </a></li>
+                      <li><a href="404"> Food </a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <img
+                  id="mega-photo"
+                  src="images/home-page/nav-img.png"
+                  alt="girl surrounded by shopping bags"
+                />
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>COMPANY <i class="fas fa-caret-down"></i></p>
+          </li>
+          <li>
+            <p>LIBRARY <i class="fas fa-caret-down"></i></p>
+          </li>
+          <li>
+            <p>CONTACT US <i class="fas fa-caret-down"></i></p>
+          </li>
+          <img
+            id="mini-photo"
+            src="images/home-page/nav-img.png"
+            alt="girl surrounded by shopping bags"
+          />
+          <li class="nav-item">
+            <select>
+              <option value="English">EN</option>
+              <option value="Romanian">RO</option>
+            </select>
+          </li>
+          <li class="nav-item">
+            <select>
+              <option value="US">$US</option>
+              <option value="EUR">&euro;EUR</option>
+              <option value="RON">RON</option>
+            </select>
+          </li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label for="cancel-btn" class="btn cancel-btn">
+          <i class="fas fa-times"></i>
+        </label>
+
+        <div class="icons-nav">
+          <i class="fas fa-search"></i>
+          <i class="far fa-user"></i>
+          <i class="far fa-heart"></i>
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!--                           MOBILE ICON MENU                    -->
+    <div class="icons-desktop">
+      <i class="fas fa-search"></i>
+      <i class="far fa-user" id="login-mobile"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
+    </div>
+
+    <!---                             LOGIN                           -->
+    <div class="login">
+      <form action="">
+        <h1>Sign in</h1>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+        <div class="pass">
+          <label for="password">Password</label>
+          <small>Forgot password</small>
+        </div>
+        <div id="form-password">
+          <input
+            type="password"
+            name="password"
+            id="password-input"
+            title="At least 6 characters length, contain 1 numeric, 1 uppercase letter, 1 special character"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+          />
+          <span id="eyes">
+            <i id="eye-close" class="fas fa-eye-slash"></i>
+            <i id="eye-open" class="fas fa-eye"></i>
+          </span>
+        </div>
+        <input type="submit" value="LOGIN" class="submit__btn" />
+
+        <p>I don't have an account</p>
+      </form>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

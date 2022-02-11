@@ -1,0 +1,17 @@
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//MEDIA QUERIES
+@mixin mobile {
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $desktop) {
+    @content;
+  }
+}
