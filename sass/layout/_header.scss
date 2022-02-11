@@ -5,6 +5,10 @@ nav {
   padding: 10px 55px 0;
   border-bottom: 1px solid $grey;
 
+  @include tablet {
+    padding: 5px 25px 0;
+  }
+
   input {
     display: none;
   }
@@ -13,10 +17,18 @@ nav {
     display: flex;
 
     .logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       margin-left: 10px;
 
       @include mobile {
         display: none;
+      }
+
+      @include tablet {
+        margin-left: none;
       }
 
       h1 {
@@ -24,12 +36,20 @@ nav {
         color: #011847;
         letter-spacing: 6.33px;
         font-size: 32px;
+
+        @include tablet {
+          font-size: 20px;
+          font-weight: 900;
+        }
       }
 
       p {
         color: $base;
         font-size: 18px;
-        padding-bottom: 15px;
+
+        @include tablet {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -42,6 +62,11 @@ nav {
 
     @include mobile {
       display: none;
+    }
+
+    @include tablet {
+      width: 320px;
+      height: auto;
     }
   }
 
@@ -146,13 +171,22 @@ nav {
       select {
         border: none;
         outline: none;
-        font-size: 20px;
+        font-size: 14px;
         color: $grey;
         padding: 0 22px;
         background-color: #fff;
+
+        @include tablet {
+          padding: 0 5px;
+          font-size: 10px;
+        }
       }
       @include mobile {
         display: none;
+      }
+
+      @include tablet {
+        padding: 0 10px;
       }
     }
 
@@ -165,6 +199,10 @@ nav {
           top: 76px;
           opacity: 1;
           visibility: visible;
+
+          @include tablet {
+            top: 70px;
+          }
         }
       }
 
@@ -175,6 +213,10 @@ nav {
         cursor: pointer;
         font-size: 14px;
         font-weight: 900;
+      }
+
+      @include tablet {
+        padding: 5px 10px;
       }
 
       p {
@@ -193,10 +235,15 @@ nav {
 
         @include mobile {
           display: block;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 900;
           line-height: 31px;
           padding-right: 22px;
+        }
+
+        @include tablet {
+          font-size: 12px;
+          padding: 0px;
         }
       }
     }
@@ -211,7 +258,7 @@ nav {
       display: none;
 
       @include mobile {
-        padding: 22px;
+        padding: 22px 0;
         font-size: 14px;
         font-weight: 900;
         display: block;
@@ -235,6 +282,11 @@ nav {
     i {
       padding: 0 22px;
       font-size: 25px;
+
+      @include tablet {
+        font-size: 16px;
+        padding: 0 10px;
+      }
     }
   }
 
@@ -341,6 +393,10 @@ nav {
       overflow: hidden;
     }
 
+    @include tablet {
+      top: 70px;
+    }
+
     .content {
       background: $dark-bg;
       padding: 22px;
@@ -351,6 +407,7 @@ nav {
       @include mobile {
         display: flex;
         flex-direction: column;
+        padding: 0 22px;
       }
     }
 
@@ -374,6 +431,7 @@ nav {
           font-size: 16px;
           font-weight: 700;
           line-height: 31px;
+          font-weight: 300;
         }
       }
     }
@@ -388,6 +446,10 @@ nav {
         display: flex;
         flex-direction: column;
         grid-gap: 0px;
+      }
+
+      @include tablet {
+        grid-gap: 35px;
       }
 
       li {
@@ -416,66 +478,3 @@ nav {
   }
 }
 
-#menu-btn:checked ~ .nav-links {
-  @include mobile {
-    left: 0%;
-  }
-}
-
-#menu-btn:checked ~ .btn.menu-btn {
-  @include mobile {
-    display: none;
-  }
-}
-
-#cancel-btn:checked ~ .btn.menu-btn {
-  @include mobile {
-    display: block;
-  }
-}
-
-#cancel-btn:checked ~ .btn.cancel-btn {
-  @include mobile {
-    display: none;
-  }
-}
-
-#cancel-btn:checked ~ .mega-menu {
-  @include mobile {
-    max-height: 100%;
-  }
-}
-
-#menu-btn:checked ~ .mega-menu {
-  @include mobile {
-    left: 0%;
-  }
-}
-
-#show-drop:checked ~ .mega-menu {
-  @include mobile {
-    max-height: 100%;
-  }
-}
-
-#show-products:checked ~ .products {
-  @include mobile {
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-#show-drop:checked ~ .links li {
-  @include mobile {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-#show-sale:checked ~ .sale {
-  @include mobile {
-    display: flex;
-    max-height: 100%;
-  }
-}
