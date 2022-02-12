@@ -28,7 +28,7 @@ nav {
       }
 
       @include tablet {
-        margin-left: none;
+        margin-left: 0px;
       }
 
       h1 {
@@ -477,4 +477,3 @@ nav {
     }
   }
 }
-

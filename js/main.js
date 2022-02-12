@@ -70,3 +70,8 @@ const showPassword = () => {
 };
 
 eyeIcons.addEventListener('click', showPassword);
+
+//ADD YEAR TO COPYRIGHT
+
+let year = new Date().getFullYear();
+document.querySelector('#year').innerHTML = year;
