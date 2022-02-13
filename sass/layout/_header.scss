@@ -2,7 +2,7 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 10px 55px 0;
+  padding: 10px 20px 0;
   border-bottom: 1px solid $grey;
 
   @include tablet {
@@ -165,7 +165,7 @@ nav {
       justify-content: space-between;
     }
     .nav-item {
-      padding: 0 22px;
+      /* padding: 0 10px; */
       display: flex;
       align-items: center;
       select {
@@ -191,7 +191,7 @@ nav {
     }
 
     li {
-      padding: 10px 22px;
+      
       list-style: none;
 
       &:hover {
@@ -199,6 +199,7 @@ nav {
           top: 76px;
           opacity: 1;
           visibility: visible;
+          
 
           @include tablet {
             top: 70px;
@@ -274,6 +275,26 @@ nav {
     color: $grey;
     cursor: pointer;
     display: flex;
+    
+
+    .icon-wrapper {
+      position: relative;
+    }
+
+    .bag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      border-radius: 50%;
+      position: absolute;
+      top: -10px;
+      right: 12px;
+      background: white;
+      border: 2px solid $base;
+    }
 
     @include mobile {
       display: none;
@@ -282,6 +303,8 @@ nav {
     i {
       padding: 0 22px;
       font-size: 25px;
+      text-align: center;
+      vertical-align: middle;
 
       @include tablet {
         font-size: 16px;
@@ -383,6 +406,7 @@ nav {
     top: 85px;
     opacity: 0;
     visibility: hidden;
+    z-index: 1;
 
     @include mobile {
       position: static;

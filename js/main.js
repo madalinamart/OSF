@@ -75,3 +75,31 @@ eyeIcons.addEventListener('click', showPassword);
 
 let year = new Date().getFullYear();
 document.querySelector('#year').innerHTML = year;
+
+
+//ADD ITEMS TO FAVORITES/CART
+const heartCounter = document.querySelector("#heart-count");
+const hearts = document.querySelectorAll(".count-heart");
+let heartClicks = 0;
+
+
+  hearts.forEach((heart) => {
+    heart.addEventListener('click', () => {
+      heartClicks += 1;
+      heartCounter.innerHTML = heartClicks;
+    });   
+  });  
+
+
+const cartCounter = document.querySelector("#cart-count");
+const carts = document.querySelectorAll(".cart-count");
+
+let cartClicks = 0;
+
+ carts.forEach((cart) => {
+   cart.addEventListener('click', () => {
+     cartClicks += 1;
+     cartCounter.innerHTML = cartClicks;
+   })
+ })
+

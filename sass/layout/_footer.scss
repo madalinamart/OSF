@@ -1,9 +1,7 @@
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  position: fixed;
-  bottom: 0;
+  justify-content: space-evenly;
   width: 100%;
 
   .column {
@@ -17,12 +15,22 @@ footer {
       font-size: 13px;
       font-weight: 700;
       margin-bottom: 20px;
+
+      @include tablet {
+        font-size: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+      }
     }
 
     p {
       color: $grey-m;
       font-size: 13px;
       line-height: 18px;
+
+      @include tablet {
+        line-height: 13px;
+      }
     }
 
     a {
@@ -66,6 +74,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 150px;
+
+        @include tablet {
+          grid-gap: 30px;
+        }
       }
     }
   }
@@ -80,6 +92,10 @@ footer {
       opacity: 0.3;
       font-size: 17px;
       padding-right: 20px;
+
+      @include tablet {
+        padding-right: 7px;
+      }
     }
   }
 }
