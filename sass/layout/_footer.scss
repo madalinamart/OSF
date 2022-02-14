@@ -4,6 +4,16 @@ footer {
   justify-content: space-evenly;
   width: 100%;
 
+  @include mobile{
+    flex-direction: column;
+    height: 100%;  
+    margin: 50px 15px;
+  }
+
+  input {
+    display: none;
+  }
+
   .column {
     display: flex;
     flex-direction: column;
@@ -20,6 +30,10 @@ footer {
         font-size: 10px;
         margin-bottom: 10px;
         font-weight: 900;
+      }
+
+      @include mobile {
+        display: none;
       }
     }
 
@@ -47,6 +61,15 @@ footer {
     .contact {
       display: flex;
       flex-direction: column;
+
+        @include mobile {
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          width: 100%;
+          max-height: 0;
+          overflow: hidden;
+        }
 
       .location {
         padding-bottom: 20px;
@@ -78,6 +101,17 @@ footer {
         @include tablet {
           grid-gap: 30px;
         }
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          width: 100%;
+          max-height: 0;
+          overflow: hidden;
+        }
       }
     }
   }
@@ -86,16 +120,68 @@ footer {
     display: flex;
     align-self: flex-start;
     justify-content: space-between;
+    margin-bottom: 30px;
 
-    a {
+    
+
+    @include mobile {
+      align-self: center;
+    }
+    i {
       color: $grey-m;
       opacity: 0.3;
       font-size: 17px;
       padding-right: 20px;
 
+      &:hover {
+        color: $base;
+        opacity: 1;
+      }
+
       @include tablet {
         padding-right: 7px;
       }
+    }
+  }
+
+  label {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      font-size: 13px;
+      color: $grey-m;
+      font-weight: 700;
+      padding: 20px 0;
+    }
+  }
+
+  .about {
+    @include mobile {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  #show-contact:checked ~ .contact {
+    @include mobile {
+      max-height: 100%;
+    }
+  }
+
+  #show-categories:checked ~ .mega-links {
+    @include mobile {
+      max-height: 100%;
+    }
+  }
+
+  #show-about:checked ~ .about {
+    @include mobile {
+      max-height: 100%;
     }
   }
 }

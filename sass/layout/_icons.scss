@@ -3,7 +3,7 @@
 
   @include mobile {
     text-align: center;
-    margin-top: auto;
+    /* margin-top: 30px; */
     color: $grey;
     cursor: pointer;
     height: 54px;
@@ -11,6 +11,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     i {
       padding: 0 22px;

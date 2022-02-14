@@ -18,10 +18,9 @@
 html {
   height: 100%;
 }
-body {
-  /* height: 1000px; */
+body {  
   min-height: 100%;
   display: flex;
   flex-direction: column;
-/*   min-width: 1280px; */
+  position: relative;
 }

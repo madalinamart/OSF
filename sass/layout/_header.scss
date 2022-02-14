@@ -294,6 +294,13 @@ nav {
       right: 12px;
       background: white;
       border: 2px solid $base;
+
+      @include tablet {
+        width: 15px;
+        height: 15px;
+        top: -5px;
+        right: 0;
+      }
     }
 
     @include mobile {
@@ -406,7 +413,7 @@ nav {
     top: 85px;
     opacity: 0;
     visibility: hidden;
-    z-index: 1;
+    z-index: 100;
 
     @include mobile {
       position: static;
