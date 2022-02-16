@@ -80,6 +80,7 @@ document.querySelector('#year').innerHTML = year;
 //ADD ITEMS TO FAVORITES/CART
 const heartCounter = document.querySelector("#heart-count");
 const hearts = document.querySelectorAll(".count-heart");
+const heartMobile = document.querySelector('#heart-count-mobile');
 let heartClicks = 0;
 
 
@@ -87,12 +88,14 @@ let heartClicks = 0;
     heart.addEventListener('click', () => {
       heartClicks += 1;
       heartCounter.innerHTML = heartClicks;
+      heartMobile.innerHTML = heartClicks;
     });   
   });  
 
 
 const cartCounter = document.querySelector("#cart-count");
 const carts = document.querySelectorAll(".cart-count");
+const cartMobile = document.querySelector('#cart-count-mobile');
 
 let cartClicks = 0;
 
@@ -100,6 +103,7 @@ let cartClicks = 0;
    cart.addEventListener('click', () => {
      cartClicks += 1;
      cartCounter.innerHTML = cartClicks;
+     cartMobile.innerHTML = cartClicks;
    })
  })
 

@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+.owl-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.owl-dots .owl-dot span {
+  background-color: #fff;
+  opacity: 0.7;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 0px;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -309,7 +324,6 @@ nav .icons-nav i {
   padding: 0 22px;
   font-size: 25px;
   text-align: center;
-  vertical-align: middle;
 }
 @media only screen and (max-width: 1279px) {
   nav .icons-nav i {
@@ -514,6 +528,29 @@ nav .mega-menu .links li a:hover {
   .icons-desktop i {
     padding: 0 22px;
     font-size: 25px;
+  }
+}
+.icons-desktop .icon-wrapper {
+  position: relative;
+}
+.icons-desktop .bag {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .icons-desktop .bag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: 12px;
+    background: #2d343a;
+    border: 2px solid #84bc22;
+    color: #84bc22;
   }
 }
 
@@ -848,6 +885,19 @@ footer label {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 29px;
 }
+@media only screen and (max-width: 1279px) {
+  .popular-items .products {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .popular-items .products {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 50px;
+  }
+}
 .popular-items .products .product {
   width: 271px;
   height: 366px;
@@ -856,6 +906,11 @@ footer label {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .popular-items .products .product {
+    margin: 30px 0;
+  }
 }
 .popular-items .products .product img {
   width: 271px;

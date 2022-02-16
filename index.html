@@ -12,6 +12,9 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    
   </head>
   <body>
     <!--                                    NAVBAR                              -->
@@ -146,13 +149,13 @@
           <i class="fas fa-search"></i>
           <i class="far fa-user"></i>
           <div class="icon-wrapper">
-          <i class="far fa-heart"></i>
-          <span class="bag" id="heart-count"></span>
-        </div>
-        <div class="icon-wrapper">
-          <i class="fas fa-shopping-bag"></i>
-          <span class="bag" id="cart-count"></span>
-        </div>
+            <i class="far fa-heart"></i>
+            <span class="bag" id="heart-count"></span>
+          </div>
+          <div class="icon-wrapper">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="bag" id="cart-count"></span>
+          </div>
         </div>
       </div>
     </nav>
@@ -163,11 +166,11 @@
       <i class="far fa-user" id="login-mobile"></i>
       <div class="icon-wrapper">
         <i class="far fa-heart"></i>
-        <span class="bag-mobile" id="heart-count-mobile"></span>
+        <span class="bag" id="heart-count-mobile"></span>
       </div>
       <div class="icon-wrapper">
         <i class="fas fa-shopping-bag"></i>
-        <span class="bag-mobile" id="cart-count-mobile"></span>
+        <span class="bag" id="cart-count-mobile"></span>
       </div>
     </div>
 
@@ -201,95 +204,107 @@
       </form>
     </div>
 
-<!--                           POPULAR ITEMS                             --> 
-<section class="popular-items">
-  <h1><span>Popular Items</span></h1>
-  <div class="products">
-    <div class="product">
-      <img src="images/home-page/products/prod1.png" alt="phone screenshots">
-      <div class="details">
-        <p>Kristina Dam Oak Table With White Marble Top</p>
-        <p class="price"> $ 799.55</p>
+    <!--                           POPULAR ITEMS                             -->
+    <section class="popular-items">
+      <h1>Popular Items</h1>
+      <div class="products owl-carousel">
+        <div class="product">
+          <img
+            src="images/home-page/products/prod1.png"
+            alt="phone screenshots"
+          />
+          <div class="details">
+            <p>Kristina Dam Oak Table With White Marble Top</p>
+            <p class="price">$ 799.55</p>
+          </div>
+          <div class="overlay">
+            <i class="fas fa-plus cart-count"></i>
+            <i class="fas fa-heart count-heart"></i>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/home-page/products/prod2.png" alt="mock text" />
+          <div class="details">
+            <p>Hay - About A Lounge Chair AAL 93</p>
+            <button>
+              <p id="button-price">$659.55</p>
+              <a href="cart">BUY NOW</a>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/home-page/products/prod3.png" alt="keyboard" />
+          <div class="details">
+            <p>Activate Facial Mask and Charcoal Soap</p>
+            <p class="price">$ 129.55</p>
+          </div>
+          <div class="overlay">
+            <i class="fas fa-plus cart-count"></i>
+            <i class="fas fa-heart count-heart"></i>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/home-page/products/prod4.png" alt="clock" />
+          <div class="details">
+            <p>Cocktail Table Walnut <br />|YES</p>
+            <p class="price">$ 299.99</p>
+          </div>
+          <div class="overlay">
+            <i class="fas fa-plus cart-count"></i>
+            <i class="fas fa-heart count-heart"></i>
+          </div>
+        </div>
+        <div class="product">
+          <img
+            src="images/home-page/products/prod5.png"
+            alt="phone screenshot of music app"
+          />
+          <div class="details">
+            <p>Hay - About A Lounge Chair AAL 93</p>
+            <p class="price">$ 659.55</p>
+          </div>
+          <div class="overlay">
+            <i class="fas fa-plus cart-count"></i>
+            <i class="fas fa-heart count-heart"></i>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/home-page/products/prod6.png" alt="compass" />
+          <div class="details">
+            <p>TORY DESK CALENDAR</p>
+            <p class="price">$ 410.99</p>
+          </div>
+          <div class="overlay">
+            <i class="fas fa-plus cart-count"></i>
+            <i class="fas fa-heart count-heart"></i>
+          </div>
+        </div>
+        <div class="product">
+          <img
+            src="images/home-page/products/prod7.png"
+            alt="shampoo bottles"
+          />
+          <div class="details">
+            <p>CH445 Wing Chair on SUITE NY</p>
+            <p class="price">$ 330.55</p>
+          </div>
+          <div class="overlay">
+            <i class="fas fa-plus cart-count"></i>
+            <i class="fas fa-heart count-heart"></i>
+          </div>
+        </div>
+        <div class="product">
+          <img
+            src="images/home-page/products/prod8.png"
+            alt="man working at desktop computer"
+          />
+          <div class="details">
+            <p>My dragons are misbehaving again. Uneblievable!</p>
+            <p><i class="far fa-comment"></i> 5H AGO</p>
+          </div>
+        </div>
       </div>
-      <div class="overlay">
-        <i class="fas fa-plus cart-count"></i>
-        <i class="fas fa-heart count-heart"></i>
-      </div>
-    </div>
-    <div class="product">
-      <img src="images/home-page/products/prod2.png" alt="mock text">
-      <div class="details">
-        <p>Hay - About A Lounge Chair AAL 93</p>
-        <button>
-          <p id="button-price">$659.55</p>
-          <a href="cart">BUY NOW</a>
-        </button>
-      </div>
-    </div>
-    <div class="product">
-      <img src="images/home-page/products/prod3.png" alt="keyboard">
-      <div class="details">
-        <p>Activate Facial Mask and Charcoal Soap</p>
-        <p class="price"> $ 129.55</p>
-      </div>
-      <div class="overlay">
-        <i class="fas fa-plus cart-count"></i>
-        <i class="fas fa-heart count-heart"></i>
-      </div>
-    </div>
-    <div class="product">
-      <img src="images/home-page/products/prod4.png" alt="clock">
-      <div class="details">
-        <p>Cocktail Table Walnut <br>|YES</p>
-        <p class="price"> $ 299.99</p>
-      </div>
-      <div class="overlay">
-        <i class="fas fa-plus cart-count"></i>
-        <i class="fas fa-heart count-heart"></i>
-      </div>
-    </div>
-    <div class="product">
-      <img src="images/home-page/products/prod5.png" alt="phone screenshot of music app">
-      <div class="details">
-        <p>Hay - About A Lounge Chair AAL 93</p>
-        <p class="price"> $ 659.55</p>
-      </div>
-      <div class="overlay">
-        <i class="fas fa-plus cart-count"></i>
-        <i class="fas fa-heart count-heart"></i>
-      </div>
-    </div>
-    <div class="product">
-      <img src="images/home-page/products/prod6.png" alt="compass">
-      <div class="details">
-        <p>TORY DESK CALENDAR</p>
-        <p class="price"> $ 410.99</p>
-      </div>
-      <div class="overlay">
-        <i class="fas fa-plus cart-count"></i>
-        <i class="fas fa-heart count-heart"></i>
-      </div>
-    </div>
-    <div class="product">
-      <img src="images/home-page/products/prod7.png" alt="shampoo bottles">
-      <div class="details">
-        <p>CH445 Wing Chair on SUITE NY</p>
-        <p class="price"> $ 330.55</p>
-      </div>
-      <div class="overlay">
-        <i class="fas fa-plus cart-count"></i>
-        <i class="fas fa-heart count-heart"></i>
-      </div>
-    </div>
-    <div class="product">
-      <img src="images/home-page/products/prod8.png" alt="man working at desktop computer">
-      <div class="details">
-        <p>My dragons are misbehaving again. Uneblievable!</p>
-        <p><i class="far fa-comment"></i> 5H AGO</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!--                          FOOTER                                    -->
@@ -298,7 +313,7 @@
         <div class="copyright">
           <p>&#169; Copyright <span id="year"></span>.</p>
           <p>All rights Reserved.</p>
-        </div>                 
+        </div>
         <input type="checkbox" id="show-contact" />
         <label for="show-contact" class="mobile-footer">
           CONTACT <i class="fas fa-caret-down"></i>
@@ -388,6 +403,10 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>

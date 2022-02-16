@@ -1,9 +1,13 @@
 //IMPORT FONT
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+
 
 //IMPORT PARTIALS
 @import 'partials/variables', 'partials/mixins';
+
+//IMPORT COMPONENTS
+@import 'components/dots';
 
 //IMPORT LAYOUTS
 @import 'layout/header', 'layout/icons', 'layout/login', 'layout/footer', 'layout/popular-items';
