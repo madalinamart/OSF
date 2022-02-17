@@ -9,18 +9,7 @@ barButton.addEventListener('click', () => {
   xButton.style.visibility = 'visible';
 });
 
-//SHOW MEGA MENU
-/* 
-const serviceButton = document.querySelector('#hover');
-const mega = document.querySelector('.menu');
 
-const showMega = () => {
-    mega.classList.toggle('close');
-}
-
-serviceButton.addEventListener('click', showMega);
-
- */
 
 //DISPLAY LOGIN
 const loginForm = document.querySelector('.login');

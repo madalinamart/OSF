@@ -1,0 +1,276 @@
+.banner-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    margin: 17px 55px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        margin: 17px auto;
+    }
+
+
+    .carousel-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile {
+            display: none;
+        }
+
+
+    .carousel-img {
+        position: relative;
+
+
+        .img-text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                font-size: 100px;
+                color: #fff;
+                font-weight: 900;
+                padding: 50px 25px;
+            }
+
+            p {
+                color: #fff; 
+                font-size: 24px;
+                line-height: 30px;
+                width: 120px;
+                text-align: center;
+            }
+        }
+    }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            
+            h4 {
+                color: $grey-m;
+                font-size: 18px;     
+                line-height: 18px; 
+                margin-top: 42px;          
+            }
+            p {
+                color: $grey-m;
+                font-size: 13px;
+                width: 195px;
+                text-align: center;  
+                margin-bottom: 32px;    
+                margin-top: 17px;          
+            }
+
+            a {
+                button {
+                    border-radius: 19px;
+                    border: 2px solid $light-blue;
+                    display: flex;
+                    align-items: center;  
+                    justify-content: space-evenly;                 
+                    background-color: #fff;
+                    width: 147px;
+                    height: 36px;
+
+                    i {
+                        color: $light-blue;
+                        font-size: 17px;
+                    }
+
+                    span {
+                        color: $light-blue;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+     
+
+    .banner {
+        position: relative;
+        width: 870px;
+        height: 505px;
+
+        @include tablet {
+            width: 400px;
+            height: 505px;
+        }
+
+        @include mobile {
+            width: 290px;
+            height: 472px;           
+            margin: 17px 16px;            
+        }
+
+        .owl-dots {
+            position: absolute;
+            bottom: 10px; 
+            left: 50%;
+            right: 50%;
+            
+            .owl-dot {
+                
+                span{
+                    display: block;
+                    margin-right: 10px;
+                }
+            }
+        }  
+       
+        .banner-img {
+            position: relative;  
+            
+            
+            img {
+            width: 870px;
+            height: 505px;
+            object-fit: cover;
+            border-radius: 17px;
+
+            @include tablet {
+             width: 400px;
+             height: 505px;
+            }
+
+            @include mobile {
+                width: 290px;
+                height: 472px;
+                object-fit: cover;
+            }
+            }            
+
+            h1 {
+                color: #fff; 
+                font-size: 48px;
+                font-family: 'Myriad Pro';
+                font-weight: 700;
+                margin-bottom: 114px;
+
+                @include tablet {
+                    font-size: 30px;
+                    margin-bottom: 50px;
+                }
+
+                @include mobile {
+                    font-size: 28px;
+                    margin: 32px 16px;
+                }
+            }
+
+            p {
+                font-family: 'Myriad Pro';
+                font-size: 14px;
+                color: #fff;
+                margin-bottom: 48px;
+                width: 336px;
+
+                @include tablet {
+                    width: 200px;
+                }
+                @include mobile {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            button {
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                background-color: transparent;
+                color: #fff;
+                border-radius: 20px;
+                padding: 13px 33px;
+                cursor: pointer;
+
+                @include tablet {
+                    margin: 70px auto;
+                }
+
+                @include mobile {
+                    margin: 70px;
+                }
+            }
+               .banner-text1 {                
+                position: absolute;
+                top: 79px;
+                bottom: 0;
+                left: 60px;
+                right: 0;
+                height: 322px;
+                width: 559px; 
+
+                @include tablet {
+                    top: 50px;
+                    left: 30px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include mobile {
+                    left: 0;
+                }
+            }
+
+            
+            .banner-text2 {
+                position: absolute;
+                top: 79px;
+                bottom: 0;
+                left: 160px;
+                right: 0;
+                height: 322x;
+                width: 559px; 
+
+                @include tablet {
+                    top: 50px;
+                    left: 30px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include mobile {
+                    left: 0;
+                }
+            }
+
+            .banner-text3 {
+                position: absolute;
+                top: 79px;
+                bottom: 0;
+                left: 250px;
+                right: 0;
+                height: 322x;
+                width: 559px; 
+
+
+                @include tablet {
+                    top: 50px;
+                    left: 30px;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include mobile {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+

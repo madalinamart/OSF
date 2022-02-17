@@ -1,6 +1,6 @@
 //IMPORT FONT
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
 //IMPORT PARTIALS
@@ -10,7 +10,7 @@
 @import 'components/dots';
 
 //IMPORT LAYOUTS
-@import 'layout/header', 'layout/icons', 'layout/login', 'layout/footer', 'layout/popular-items';
+@import 'layout/header', 'layout/icons', 'layout/login', 'layout/footer', 'layout/popular-items', 'layout/carousel-banner','layout/osf-banner';
 
 * {
   margin: 0;

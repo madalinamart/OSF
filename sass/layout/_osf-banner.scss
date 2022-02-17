@@ -1,0 +1,42 @@
+.osf-banner {
+    position: relative;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 41px;
+
+            @include mobile {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            width: 334px;
+            height: 28px;
+            text-align: center;
+        }
+    }
+}

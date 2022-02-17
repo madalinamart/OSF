@@ -1,20 +1,9 @@
-/* $(document).ready(function(){
-$(".owl-carousel").owlCarousel({
-   loop: true,
-   margin: 10, 
-   autoWidth: true,
-   autoHeight: true,
-   items: 1,
-   dots: true,
-});
-});
- */
 function owlInitialize() {
    if ($(window).width() < 768) {
-      $('.owl-carousel').owlCarousel(
+      $('.products').owlCarousel(
          {
             loop: true,
-            margin: 10, 
+            margin: 20, 
             autoWidth: true,
             autoHeight: true,
             items: 1,
@@ -24,7 +13,7 @@ function owlInitialize() {
          }
       );
    }else{
-      $('.owl-carousel').owlCarousel('destroy');
+      $('.products').owlCarousel('destroy');
    }
 }
 
@@ -36,3 +25,16 @@ $(window).resize(function() {
    owlInitialize();
 });
 
+//BANNER CAROUSEL
+$(document).ready(function(){
+   $(".banner").owlCarousel({
+      loop: true,
+      items: 1,
+      dots: true,
+      center: true,
+      mouseDrag: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      autoplayTimeout: 7000,
+   });
+ });
