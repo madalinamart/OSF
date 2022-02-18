@@ -38,3 +38,28 @@ $(document).ready(function(){
       autoplayTimeout: 7000,
    });
  });
+
+
+ //FEATURED PRODUCTS CAROUSEL
+ $(document).ready(function(){
+   $(".featured").owlCarousel({
+      loop: true,      
+      margin: 30,      
+      dots: false,
+      nav: true,
+      mouseDrag: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      autoplayTimeout: 5000,
+      responsive: {
+         768:{
+            items: 3,
+            slideBy: 3,
+         },
+         1280:{
+            items: 4,
+            slideBy: 4,
+         }
+      }
+   });
+ });
