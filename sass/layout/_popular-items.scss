@@ -42,9 +42,7 @@
 
     span {
       background-color: $dark-blue;
-      padding: 8px 50px;
-
-    
+      padding: 8px 50px;    
     }
   }
   
@@ -190,7 +188,22 @@
           }
         }
       }
+
+         
     }
+
+    .product-load {
+      display: none;
+
+      &.active {
+        display: grid;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+
+
 
     button {
       margin: 10px auto;
@@ -214,7 +227,33 @@
         color: #131313;
         padding: 13px 23px;
       }
-    }
- 
+    } 
   }
+
+  #load {
+    margin: 51px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid $white-bg;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 13px 60px;
+
+    p {
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    i {
+      color: #fff;
+      font-size: 20px;
+      padding: 0 24px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  } 
 }

@@ -1,24 +1,24 @@
 [
   {
-    "image": "images/home-page/posts/post-1.png",
+    "image": "images/home-page/products/prod1.png",
     "alt" : "product 1",
     "name": "PRODUCT 1",
     "price": " $ 300"
   },
   {
-    "image": "images/home-page/posts/post-2.png",
+    "image": "images/home-page/products/prod2.png",
     "alt" : "product 2",
     "name": "PRODUCT 2",
     "price": " $ 700"
   },
   {
-    "image": "images/home-page/posts/post-3.png",
+    "image": "images/home-page/products/prod3.png",
     "alt" : "product 3",
     "name": "PRODUCT 3",
     "price": " $ 400"
   },
   {
-    "image": "images/home-page/posts/post-4.png",
+    "image": "images/home-page/products/prod4.png",
     "alt" : "product 4",
     "name": "PRODUCT 4",
     "price": " $ 500"
