@@ -106,6 +106,7 @@
         position: relative;
         width: 870px;
         height: 505px;
+         
 
         @include tablet {
             width: 400px;
@@ -139,7 +140,7 @@
             
             img {
             width: 870px;
-            height: 505px;
+            height: 505px;  
             object-fit: cover;
             border-radius: 17px;
 

@@ -7,7 +7,7 @@
 @import 'partials/variables', 'partials/mixins';
 
 //IMPORT COMPONENTS
-@import 'components/dots','components/featured';
+@import 'components/dots','components/featured', 'components/small-image', 'components/cookie';
 
 //IMPORT LAYOUTS
 @import 'layout/header', 'layout/icons', 'layout/login', 'layout/footer', 'layout/popular-items', 'layout/carousel-banner','layout/osf-banner', 'layout/featured-products', 'layout/services','layout/404', 'layout/category-landing', 'layout/product';
@@ -21,10 +21,11 @@
 }
 html {
   height: 100%;
+
 }
 body {  
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: relative;  
 }

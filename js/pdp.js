@@ -81,3 +81,22 @@ window.addEventListener('load', () => {
     document.querySelector('#description').classList.add('active');
     document.querySelector('#description-tab').classList.add('active');
 })
+
+//CHANGE IMAGES 
+$(document).ready(function(){
+    $('.small-image > img').click(function(){
+        var $smallSrc = $(this).attr('src');
+        $('.big-image > img').attr('src', $smallSrc);
+    })
+})
+
+
+//SCROLL TO TOP
+const backToTop = document.querySelector('#back-to-top');
+
+const topFunction = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+backToTop.addEventListener('click', topFunction);

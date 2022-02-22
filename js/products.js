@@ -28,12 +28,3 @@ function display(products) {
     }
 }
 
-const products = document.querySelector('.product-load');
-const loadMore = document.querySelector('#load');
-
-const displayProducts = () => {
-    products.classList.add('active');
-    loadMore.style.display = 'none';
-}
-
-loadMore.addEventListener('click', displayProducts);

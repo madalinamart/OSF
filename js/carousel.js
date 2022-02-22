@@ -63,3 +63,31 @@ $(document).ready(function(){
       }
    });
  });
+
+/* //SMALL IMAGES CAROUSEL
+function owlInitializeImages() {
+   if($(window).width() < 768) {
+      $(".small-image").owlCarousel({         
+            loop: false,
+            margin: 20, 
+            items: 3,
+            autoWidth: true,
+            nav: false,
+            dots: true,
+            center: true,
+            mouseDrag: true,
+            rewind: true,
+         }
+      );
+   }else{
+      $(".small-image").owlCarousel("destroy");
+   }
+}
+
+$(document).ready(function(e) {
+   owlInitializeImages();
+});
+
+$(window).resize(function() {
+   owlInitializeImages();
+}); */
