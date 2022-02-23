@@ -1,9 +1,10 @@
-.small-image {        
+
+.small-image {   
     img{
+    display: block;
     width: 73px;
     height: 70px;
-    }               
-  margin-top: 27px;
+    }   margin-top: 27px;
   margin-right: 70px;
   margin-bottom: 240px;
   display: flex;
@@ -18,9 +19,9 @@
     align-self: center;
     margin-right: 0px;
   }
-  @include mobile {
-    align-self: flex-start;
+
+  .owl-stage-outer {
+    width: 230px;
   }
-
-
+  
 }

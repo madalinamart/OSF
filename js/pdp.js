@@ -100,3 +100,20 @@ const topFunction = () => {
 }
 
 backToTop.addEventListener('click', topFunction);
+
+//IMAGE ZOOM
+const zoomButton = document.querySelector('.fa-search-plus');
+const image = document.querySelector('.big-image img');
+
+
+function openFullscreen() {
+  if (image.requestFullscreen) {
+    image.requestFullscreen();
+  } else if (image.webkitRequestFullscreen) { 
+    image.webkitRequestFullscreen();
+  } else if (image.msRequestFullscreen) {
+    image.msRequestFullscreen();
+  }
+}
+
+zoomButton.addEventListener('click', openFullscreen);

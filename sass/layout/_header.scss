@@ -4,6 +4,10 @@ nav {
   align-items: center;
   padding: 10px 20px 0;
   border-bottom: 1px solid $grey;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
 
   @include tablet {
     padding: 5px 25px 0;
@@ -87,8 +91,7 @@ nav {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    height: 65px;    
-
+    height: 65px;
 
     @include mobile {
       margin: auto;
@@ -158,12 +161,13 @@ nav {
     @include mobile {
       position: fixed;
       width: 100%;
-      top: 75px;
+      top: 70px;
       left: -100%;
       background: $dark-bg;
       display: block;
       overflow-y: auto;
       justify-content: space-between;
+      height: 70%;
     }
     .nav-item {
       display: flex;
@@ -191,7 +195,6 @@ nav {
     }
 
     li {
-      
       list-style: none;
 
       &:hover {
@@ -199,7 +202,6 @@ nav {
           top: 76px;
           opacity: 1;
           visibility: visible;
-          
 
           @include tablet {
             top: 70px;
@@ -240,6 +242,10 @@ nav {
           font-weight: 900;
           line-height: 31px;
           padding-right: 22px;
+
+          &:hover {
+            border-bottom: none;
+          }
         }
 
         @include tablet {
@@ -250,6 +256,11 @@ nav {
     }
 
     .desktop-item {
+      &:hover {
+        @include tablet {
+          border-bottom: none;
+        }
+      }
       @include mobile {
         display: none;
       }
@@ -275,7 +286,6 @@ nav {
     color: $grey;
     cursor: pointer;
     display: flex;
-    
 
     .icon-wrapper {
       position: relative;
@@ -311,6 +321,10 @@ nav {
       padding: 0 22px;
       font-size: 25px;
       text-align: center;
+
+      &:hover {
+        color: $base;
+      }
 
       @include tablet {
         font-size: 16px;
@@ -421,7 +435,7 @@ nav {
       opacity: 1;
       visibility: visible;
       max-height: 0px;
-      overflow: hidden;      
+      overflow: hidden;
     }
 
     @include tablet {
@@ -433,7 +447,12 @@ nav {
       padding: 22px;
       display: grid;
       grid-template-columns: 2.5fr 1fr 1fr;
+      grid-gap: 100px;
       width: 100%;
+
+      @include tablet {
+        grid-gap: 0px;
+      }
 
       @include mobile {
         display: flex;
@@ -443,10 +462,6 @@ nav {
     }
 
     .row {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
       @include mobile {
         width: 100%;
       }
@@ -470,7 +485,7 @@ nav {
     .links {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 100px;
+      grid-gap: 150px;
       list-style: none;
 
       @include mobile {
@@ -480,7 +495,7 @@ nav {
       }
 
       @include tablet {
-        grid-gap: 35px;
+        grid-gap: 0px;
       }
 
       li {

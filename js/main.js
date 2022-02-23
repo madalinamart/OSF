@@ -57,6 +57,7 @@ eyeIcons.addEventListener('click', showPassword);
 const heartCounter = document.querySelector("#heart-count");
 const hearts = document.querySelectorAll(".count-heart");
 const heartMobile = document.querySelector('#heart-count-mobile');
+
 let heartClicks = 0;
 
 
@@ -72,6 +73,7 @@ let heartClicks = 0;
 const cartCounter = document.querySelector("#cart-count");
 const carts = document.querySelectorAll(".cart-count");
 const cartMobile = document.querySelector('#cart-count-mobile');
+const buyNowButton = document.querySelector('#buy-now');
 
 let cartClicks = 0;
 
@@ -83,3 +85,10 @@ let cartClicks = 0;
    })
  })
 
+ const incrementCart = () => {
+   cartClicks += 1;
+   cartCounter.innerHTML = cartClicks;
+    cartMobile.innerHTML = cartClicks;
+ }
+
+ buyNowButton.addEventListener('click', incrementCart);

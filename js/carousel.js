@@ -1,4 +1,4 @@
-function owlInitialize() {
+function owlInitializeProducts() {
    if ($(window).width() < 768) {
       $('.products').owlCarousel(
          {
@@ -18,11 +18,11 @@ function owlInitialize() {
 }
 
 $(document).ready(function(e) {
-   owlInitialize();
+   owlInitializeProducts();
 });
 
 $(window).resize(function() {
-   owlInitialize();
+   owlInitializeProducts();
 });
 
 //BANNER CAROUSEL
@@ -64,30 +64,67 @@ $(document).ready(function(){
    });
  });
 
-/* //SMALL IMAGES CAROUSEL
-function owlInitializeImages() {
-   if($(window).width() < 768) {
-      $(".small-image").owlCarousel({         
-            loop: false,
+
+// PPD CAROUSEL 
+ function owlInitialize() {
+   if ($(window).width() < 768) {
+      $('.products-pdp').owlCarousel(
+         {
+            loop: true,
             margin: 20, 
-            items: 3,
             autoWidth: true,
-            nav: false,
+            autoHeight: true,
+            items: 1,
             dots: true,
             center: true,
             mouseDrag: true,
-            rewind: true,
          }
       );
    }else{
-      $(".small-image").owlCarousel("destroy");
+      $('.products-pdp').owlCarousel('destroy');
    }
-}
+} 
 
 $(document).ready(function(e) {
-   owlInitializeImages();
+   owlInitialize();
 });
 
 $(window).resize(function() {
-   owlInitializeImages();
-}); */
+   owlInitialize();
+});
+
+
+//SMALL IMAGE CAROUSEL
+function owlInitializeImage() {
+   if ($(window).width() < 768) {
+      $('.small-image').owlCarousel(
+         {
+            loop: true,
+            margin: 10,
+            autoWidth: true,
+            autoHeight: true,
+            items: 3,
+            dots: true,
+            mouseDrag: true,
+            responsive: {
+               768:{
+                  items: 3,
+                  slideBy: 3,
+                  autoWidth: true,
+                  autoHeight: true,
+               }
+            }
+         }
+      );
+   }else{
+      $('.small-image').owlCarousel('destroy');
+   }
+} 
+
+$(document).ready(function(e) {
+   owlInitializeImage();
+});
+
+$(window).resize(function() {
+   owlInitializeImage();
+});

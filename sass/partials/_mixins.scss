@@ -1,8 +1,3 @@
-@mixin box($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-
 //MEDIA QUERIES
 @mixin mobile {
   @media only screen and (max-width: $tablet) {
@@ -13,5 +8,144 @@
 @mixin tablet {
   @media only screen and (max-width: $desktop) {
     @content;
+  }
+}
+
+//BREADCRUMB MIXIN
+@mixin breadcrumb {
+  padding: 47px 16px;
+  list-style: none;
+
+  li {
+    display: inline;
+    font-size: 13px;
+
+    & + li:before {
+      padding: 8px;
+      color: black;
+      content: '/\00a0';
+    }
+
+    a {
+      color: $base;
+      text-decoration: none;
+    }
+  }
+}
+
+
+//TITLE MIXIN
+
+@mixin title($size, $color, $line-color, $background, $opacity) {
+  text-align: center;
+  font-size: $size;
+  color: $color;
+  font-weight: 900;
+  margin: 89px auto 0;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    background-color: $line-color;
+    opacity: $opacity;
+    position: absolute;
+    top: 50%;
+    content: '';
+    height: 3px;
+    width: 50vw;
+    right: 0;
+    z-index: -3;
+  }
+
+  &::after {
+    background-color: $line-color;
+    opacity: $opacity;
+    position: absolute;
+    top: 50%;
+    content: '';
+    height: 3px;
+    width: 50vw;
+    left: 0;
+    z-index: -2;
+  }
+
+  span {
+    background-color: $background;
+    padding: 8px 50px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+//PRODUCTS CONTAINER MIXIN
+@mixin product-container($background) {
+  background: $background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @content;
+}
+
+//PRODUCT MIXIN
+
+@mixin product {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  padding: 51px 59px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 29px;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 50px;
+  }
+}
+
+//PRODUCT DETAILS MIXIN
+@mixin product-details {
+  width: 271px;
+  height: 366px;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include mobile {
+    margin: 30px 0;
+  }
+
+  img {
+    width: 271px;
+    height: 261px;
+    object-fit: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+  .details {
+    text-align: center;
+
+    p {
+      color: $grey-m;
+      font-size: 16px;
+      line-height: 18px;
+      margin: 20px 0;
+    }
+
+    .price {
+      color: #011847;
+      font-size: 14px;
+    }
   }
 }

@@ -1,71 +1,12 @@
 .product-details {
-  background: #f1edea;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ @include product-container(#f1edea) {
   width: 100%;
-
+ }
   ul.bread {
-    padding: 47px 16px;
-    list-style: none;
-
-    li {
-      display: inline;
-      font-size: 13px;
-
-      & + li:before {
-        padding: 8px;
-        color: black;
-        content: '/\00a0';
-      }
-
-      a {
-        color: $base;
-        text-decoration: none;
-      }
-    }
+    @include breadcrumb;
   }
   h1 {
-    text-align: center;
-    font-size: 40px;
-    color: $grey-m;
-    margin: 26px auto;
-    position: relative;
-    z-index: 1;
-
-    @include tablet {
-      font-size: 20px;
-    }
-
-    &::before {
-      background-color: #e5e2df;
-      position: absolute;
-      top: 50%;
-      content: '';
-      height: 3px;
-      width: 60vw;
-      right: 0;
-      z-index: -3;
-      opacity: 1;
-    }
-
-    &::after {
-      background-color: #e5e2df;
-      position: absolute;
-      top: 50%;
-      content: '';
-      height: 3px;
-      width: 60vw;
-      left: 0;
-      z-index: -2;
-      opacity: 1;
-    }
-
-    span {
-      background-color: #f1edea;
-      padding: 8px 33px;
-    }
+    @include title(40px, $grey-m, #e5e2df, #f1edea, 1);
   }
 
   .product {
@@ -76,7 +17,6 @@
     background-color: #fff;
     align-items: center;
     justify-content: center;
-
 
     .details {
       display: flex;
@@ -97,17 +37,31 @@
           flex-direction: column;
         }
 
-      .big-image {
-        margin: 10px 33px;
-        align-self: flex-start;
+        .big-image {
+          position: relative;
+          margin: 10px 33px;
+          align-self: flex-start;
 
-        @include tablet {
-          align-self: center;
+          img {
+            z-index: 999;
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+
+          i {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: $base;
+            font-size: 25px;
+            cursor: pointer;
+          }
+          @include tablet {
+            align-self: center;
+          }
         }
-
       }
-    
-  }
 
       .pdp {
         align-self: flex-start;
@@ -118,6 +72,10 @@
         @include tablet {
           margin-left: 54px;
           margin-bottom: 40px;
+        }
+
+        @include mobile {
+          margin: 10px;
         }
 
         h2 {
@@ -299,7 +257,6 @@
     }
 
     .tabs {
-
       @include mobile {
         display: none;
       }
@@ -340,67 +297,23 @@
       }
     }
   }
-
-
-    h1 {
-      text-align: center;
-      font-size: 48px;
-      color: $grey-m;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-  
-      @include tablet {
-        font-size: 20px;
-      }
-  
-      &::before {
-        background-color: #e5e2df;
-        position: absolute;
-        top: 50%;
-        content: '';
-        height: 3px;
-        width: 50vw;
-        right: 0;
-        z-index: -3;
-        opacity: 1;
-      }
-  
-      &::after {
-        background-color: #e5e2df;
-        position: absolute;
-        top: 50%;
-        content: '';
-        height: 3px;
-        width: 50vw;
-        left: 0;
-        z-index: -2;
-        opacity: 1;
-      }
-  
-      span {
-        background-color: #f1edea;
-        padding: 8px 33px;
-      }
-    }
-  }
+}
 
 #back-to-top {
   display: none;
 
   @include mobile {
-  display: block;
-  font-size: 14px;
-  background: $base;
-  color: #fff;
-  border: 1px solid $white-bg;
-  border-radius: 20px;
-  padding: 13px 23px;
-  margin-bottom: 50px;
-  cursor: pointer;
- }
+    display: block;
+    font-size: 14px;
+    background: $base;
+    color: #fff;
+    border: 1px solid $white-bg;
+    border-radius: 20px;
+    padding: 13px 23px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
 }
-
 
 #black {
   background: #131313;
@@ -412,3 +325,17 @@
   background: #315bbd;
 }
 
+.popular-items-pdp {
+  @include product-container(#f1edea);
+  h1 {
+    @include title(24px, $grey-m, #e5e2df, #f1edea, 1);
+  }
+
+  .products-pdp {
+    @include product;
+
+    .product-pdp {
+      @include product-details;
+    }
+  }
+}
