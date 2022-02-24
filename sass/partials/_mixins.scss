@@ -41,7 +41,7 @@
   font-size: $size;
   color: $color;
   font-weight: 900;
-  margin: 89px auto 0;
+  margin: 50px auto 89px;
   position: relative;
   z-index: 1;
 
@@ -147,5 +147,33 @@
       color: #011847;
       font-size: 14px;
     }
+  }
+}
+
+
+//QUANTITY MIXIN
+@mixin quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid $white-bg;
+  border-radius: 20px;
+  padding: 10px 0px;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+
+  button,
+  input {
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+  }
+  input {
+    width: 50%;
   }
 }

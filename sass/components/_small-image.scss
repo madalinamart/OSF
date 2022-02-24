@@ -1,17 +1,16 @@
-
 .small-image {   
     img{
     display: block;
     width: 73px;
     height: 70px;
-    }   margin-top: 27px;
+    }  
+  margin-top: 27px;
   margin-right: 70px;
   margin-bottom: 240px;
   display: flex;
   flex-direction: column;
   grid-gap: 25px;
   cursor: pointer;
-
 
   @include tablet {
     flex-direction: row;
@@ -22,6 +21,5 @@
 
   .owl-stage-outer {
     width: 230px;
-  }
-  
+  }  
 }

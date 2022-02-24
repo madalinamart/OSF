@@ -97,6 +97,7 @@ $(window).resize(function() {
 //SMALL IMAGE CAROUSEL
 function owlInitializeImage() {
    if ($(window).width() < 768) {
+      $('.small-image').addClass('owl-carousel');
       $('.small-image').owlCarousel(
          {
             loop: true,
@@ -118,6 +119,7 @@ function owlInitializeImage() {
       );
    }else{
       $('.small-image').owlCarousel('destroy');
+      $('.small-image').removeClass('owl-carousel');
    }
 } 
 

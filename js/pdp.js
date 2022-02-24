@@ -84,7 +84,7 @@ window.addEventListener('load', () => {
 
 //CHANGE IMAGES 
 $(document).ready(function(){
-    $('.small-image > img').click(function(){
+    $('.small-image div > img').click(function(){
         var $smallSrc = $(this).attr('src');
         $('.big-image > img').attr('src', $smallSrc);
     })
@@ -117,3 +117,11 @@ function openFullscreen() {
 }
 
 zoomButton.addEventListener('click', openFullscreen);
+
+const printButton = document.querySelector('#print');
+
+const print = () => {
+    window.print();
+}
+
+printButton.addEventListener('click',print );
