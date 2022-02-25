@@ -184,11 +184,11 @@
             <img src="images/home-page/products/prod1.png" alt="image" />
             <div class="title-price">
               <p>Kristina Dam Oak Tabke With White Marble Top</p>
-              <p>$2,195.00</p>
+              <p class="item-price">$2195.00</p>
             </div>
             <div class="quantity">
               <button id="minus">-</button>
-              <input type="text" id="number" value="1" />
+              <input type="text" class="valueQuantity" id="number" value="1" />
               <button id="plus">+</button>
             </div>
             <h3 id="price">$ 2195</h3>
@@ -198,11 +198,11 @@
             <img src="images/home-page/products/prod2.png" alt="image" />
             <div class="title-price">
               <p>Activate Activate Facial Mask and Charcoal Soap</p>
-              <p>$1,249.00</p>
+              <p class="item-price">$1249.00</p>
             </div>
             <div class="quantity">
               <button id="minus2">-</button>
-              <input type="text" id="number2" value="1" />
+              <input type="text" class="valueQuantity" id="number2" value="1" />
               <button id="plus2">+</button>
             </div>
             <h3 id="price2">$ 1249</h3>
@@ -221,7 +221,7 @@
             </div>
             <div class="buttons">
               <p>CART SUBTOTAL</p>
-              <strong id="subtotal"></strong>
+              <strong class="subtotal"></strong>
             </div>
             <div class="buttons">
               <h3>SHIPPING AND HANDLING</h3>
@@ -233,15 +233,24 @@
                     name="ship"
                     value="10"
                     checked
+                    class="radio-input"
                   />
                   <label for="flat">Flat Rate: <span>$10.00</span></label>
                 </div>
                 <div>
-                  <input type="radio" id="free" name="ship" value="0" checked />
+                  <input
+                    class="radio-input"
+                    type="radio"
+                    id="free"
+                    name="ship"
+                    value="0"
+                    checked
+                  />
                   <label for="free">Free Shipping</label>
                 </div>
                 <div>
                   <input
+                    class="radio-input"
                     type="radio"
                     id="iternational"
                     name="ship"
@@ -254,6 +263,7 @@
                 </div>
                 <div>
                   <input
+                    class="radio-input"
                     type="radio"
                     id="local"
                     name="ship"
@@ -264,6 +274,7 @@
                 </div>
                 <div>
                   <input
+                    class="radio-input"
                     type="radio"
                     id="pickup"
                     name="ship"
