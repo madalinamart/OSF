@@ -2767,7 +2767,7 @@ footer label {
 .cart .container .items {
   display: flex;
   flex-direction: column;
-  padding: 80px;
+  padding: 20px;
   border-bottom: 5px solid #f1edea;
 }
 .cart .container .items .item {
@@ -2782,7 +2782,7 @@ footer label {
   margin-right: 20px;
 }
 .cart .container .items .item p {
-  margin-right: 350px;
+  margin-right: 100px;
   font-size: 16px;
   color: #45413e;
   line-height: 18px;
@@ -2793,7 +2793,7 @@ footer label {
   margin-top: 10px;
 }
 .cart .container .items .item .quantity {
-  margin-right: 100px;
+  margin-right: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2819,15 +2819,20 @@ footer label {
   width: 50%;
 }
 .cart .container .items .item .price {
-  margin-right: 100px;
+  margin-right: 60px;
   color: #45413e;
   font-size: 30px;
   font-weight: 700;
 }
+.cart .container .items .item i {
+  color: #999999;
+  cursor: pointer;
+  margin-left: 60px;
+}
 .cart .container .recap-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 80px;
+  padding: 20px;
 }
 .cart .container .recap-container .coupon input {
   border-radius: 20px;
@@ -2854,7 +2859,7 @@ footer label {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-right: 100px;
+  margin-right: 50px;
   margin-bottom: 40px;
 }
 .cart .container .recap-container .recap .buttons p {
@@ -2892,6 +2897,112 @@ footer label {
 .cart .container .recap-container .recap .buttons .shipping input {
   margin: 10px;
   color: #84bc22;
+}
+
+.countdown {
+  background: #f1edea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.countdown .countdown-wrapper {
+  background-color: #fff;
+  width: 85%;
+  margin: 50px 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #45413e;
+}
+.countdown .countdown-wrapper h1 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.countdown .countdown-wrapper p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.countdown .countdown-wrapper .countdown-container {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 767px) {
+  .countdown .countdown-wrapper .countdown-container {
+    flex-direction: column;
+  }
+}
+.countdown .countdown-wrapper .countdown-container .time {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .countdown .countdown-wrapper .countdown-container .time {
+    padding: 10px;
+  }
+}
+.countdown .countdown-wrapper .countdown-container .time h2 {
+  font-size: 48px;
+  line-height: 30px;
+  font-weight: 900;
+  margin-bottom: 60px;
+  border: 1px solid #84bc22;
+  border-radius: 50%;
+  padding: 30px;
+  width: 108px;
+  height: 108px;
+}
+@media only screen and (max-width: 1279px) {
+  .countdown .countdown-wrapper .countdown-container .time h2 {
+    font-size: 30px;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+  }
+}
+.countdown .countdown-wrapper .countdown-container .time small {
+  font-size: 18px;
+  line-height: 30px;
+}
+.countdown .countdown-wrapper form {
+  position: relative;
+}
+.countdown .countdown-wrapper form input {
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid #999999;
+  width: 400px;
+}
+@media only screen and (max-width: 767px) {
+  .countdown .countdown-wrapper form input {
+    width: 200px;
+  }
+}
+.countdown .countdown-wrapper form button {
+  border: none;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .countdown .countdown-wrapper form button {
+    position: static;
+  }
+}
+.countdown .countdown-wrapper form button i {
+  color: #84bc22;
+  font-size: 20px;
 }
 
 * {
