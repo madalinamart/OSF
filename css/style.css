@@ -1507,6 +1507,10 @@ footer label {
   position: relative;
   width: 100%;
 }
+.osf-banner a {
+  color: #fff;
+  cursor: pointer;
+}
 .osf-banner img {
   width: 100%;
   height: auto;
@@ -2776,6 +2780,11 @@ footer label {
   margin-bottom: 50px;
   align-items: center;
 }
+@media only screen and (max-width: 767px) {
+  .cart .container .items .item {
+    flex-direction: column;
+  }
+}
 .cart .container .items .item img {
   width: 100px;
   height: 100px;
@@ -2786,6 +2795,11 @@ footer label {
   font-size: 16px;
   color: #45413e;
   line-height: 18px;
+}
+@media only screen and (max-width: 1279px) {
+  .cart .container .items .item p {
+    margin-right: 20px;
+  }
 }
 .cart .container .items .item p:nth-child(2) {
   font-size: 14px;
@@ -2818,6 +2832,11 @@ footer label {
 .cart .container .items .item .quantity input {
   width: 50%;
 }
+@media only screen and (max-width: 1279px) {
+  .cart .container .items .item .quantity {
+    margin-right: 30px;
+  }
+}
 .cart .container .items .item .price {
   margin-right: 60px;
   color: #45413e;
@@ -2829,10 +2848,25 @@ footer label {
   cursor: pointer;
   margin-left: 60px;
 }
+@media only screen and (max-width: 1279px) {
+  .cart .container .items .item i {
+    margin-left: 30px;
+  }
+}
 .cart .container .recap-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .cart .container .recap-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cart .container .recap-container .coupon {
+    margin-bottom: 20px;
+  }
 }
 .cart .container .recap-container .coupon input {
   border-radius: 20px;
@@ -2840,6 +2874,11 @@ footer label {
   padding: 10px 30px;
   margin-right: 30px;
   cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .cart .container .recap-container .coupon input {
+    margin-bottom: 20px;
+  }
 }
 .cart .container .recap-container .coupon button {
   border-radius: 20px;
@@ -2862,6 +2901,16 @@ footer label {
   margin-right: 50px;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 1279px) {
+  .cart .container .recap-container .recap .buttons {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cart .container .recap-container .recap .buttons {
+    align-items: flex-start;
+  }
+}
 .cart .container .recap-container .recap .buttons p {
   color: #45413e;
 }
@@ -2877,6 +2926,11 @@ footer label {
   font-size: 16px;
   padding: 10px 30px;
   cursor: pointer;
+}
+@media only screen and (max-width: 1279px) {
+  .cart .container .recap-container .recap .buttons button:first-child {
+    margin-bottom: 20px;
+  }
 }
 .cart .container .recap-container .recap .buttons button:nth-child(2) {
   border-radius: 20px;

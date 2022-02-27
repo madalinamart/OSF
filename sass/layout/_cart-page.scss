@@ -29,6 +29,10 @@
         margin-bottom: 50px;
         align-items: center;
 
+        @include mobile {
+          flex-direction: column;
+        }
+
         img {
           width: 100px;
           height: 100px;
@@ -41,6 +45,10 @@
           color: $grey-m;
           line-height: 18px;
 
+          @include tablet {
+            margin-right: 20px;
+          }
+
           &:nth-child(2) {
             font-size: 14px;
             color: $grey;
@@ -51,6 +59,11 @@
         .quantity {
           margin-right: 60px;
           @include quantity;
+
+          @include tablet {
+            margin-right: 30px;
+          }
+
         }
 
         .price {
@@ -64,6 +77,10 @@
           color: $grey;
           cursor: pointer;
           margin-left: 60px;
+
+          @include tablet {
+            margin-left: 30px;
+          }
         }
       }
     }
@@ -73,13 +90,24 @@
       grid-template-columns: 1fr 1fr;
       padding: 20px;
 
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
       .coupon {
+        @include mobile {
+          margin-bottom: 20px;
+        }
         input {
           border-radius: 20px;
           border: 2px solid #f1edea;
           padding: 10px 30px;
           margin-right: 30px;
           cursor: pointer;
+        
+          @include mobile {
+            margin-bottom: 20px;
+          }
         }
 
         button {
@@ -90,6 +118,7 @@
           font-size: 16px;
           padding: 10px 30px;
           cursor: pointer;
+       
         }
       }
 
@@ -104,6 +133,14 @@
           align-items: center;
           margin-right: 50px;
           margin-bottom: 40px;
+
+          @include tablet {
+            flex-direction: column;
+          }
+
+          @include mobile {
+            align-items: flex-start;
+          }
 
           p {
             color: $grey-m;
@@ -123,6 +160,10 @@
               font-size: 16px;
               padding: 10px 30px;
               cursor: pointer;
+
+              @include tablet {
+                margin-bottom: 20px;
+              }
             }
 
             &:nth-child(2) {
