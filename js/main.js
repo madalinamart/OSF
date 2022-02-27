@@ -1,7 +1,3 @@
-
-
-
-
 //DISPLAY LOGIN
 const loginForm = document.querySelector('.login');
 const userIcon = document.querySelector('.fa-user');

@@ -9,8 +9,11 @@
 //IMPORT COMPONENTS
 @import 'components/dots', 'components/small-image', 'components/cookie';
 
+//IMPORT REUSABLES
+@import 'reusables/featured-products', 'reusables/footer', 'reusables/header', 'reusables/icons', 'reusables/popular-items', 'reusables/services';
+
 //IMPORT LAYOUTS
-@import 'layout/header', 'layout/icons', 'layout/login', 'layout/footer', 'layout/popular-items', 'layout/carousel-banner','layout/osf-banner', 'layout/featured-products', 'layout/services','layout/404', 'layout/category-landing', 'layout/product', 'layout/cart-page','layout/countdown';
+@import  'layout/login', 'layout/carousel-banner','layout/osf-banner', 'layout/404', 'layout/category-landing', 'layout/product', 'layout/cart-page','layout/countdown';
 
 * {
   margin: 0;
