@@ -1,6 +1,6 @@
 .cookie {
     position: fixed;
-    bottom: 30px;
+    bottom: 150px;
     left:50%;
     transform: translate(-50%,0);
     background: #fff;
@@ -15,6 +15,7 @@
 
     @include mobile {
         flex-direction: column;
+        bottom: 100px;
     }
 
     &.hide {
